@@ -9,7 +9,7 @@ import UIKit
 
 class MoviesViewController: ViewController<MoviesView> {
 
-    private var movies: [Movie] = [] {
+    private var movies: [Movie]? = [] {
         didSet {
             customView.tableview.reloadData()
         }
@@ -35,7 +35,7 @@ class MoviesViewController: ViewController<MoviesView> {
 
 extension MoviesViewController: MoviesPresenterDelegate, UITableViewDelegate, UITableViewDataSource{
     
-    func presentMovies(movies: [Movie]) {
+    func presentMovies(movies: [Movie]?) {
         DispatchQueue.main.async {
             self.movies = movies
         }
@@ -47,16 +47,24 @@ extension MoviesViewController: MoviesPresenterDelegate, UITableViewDelegate, UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let movies = movies else {
+            return 0
+        }
         return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
-        cell.configureWith(movie: movies[indexPath.row])
+        if let movies = movies {
+            cell.configureWith(movie: movies[indexPath.row])
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let movies = movies else {
+            return
+        }
         tableView.deselectRow(at: indexPath, animated: true)
         moviesPresenter!.didTap(movie: movies[indexPath.row])
     }

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-public class Networking {
+public class Networking: NetworkingDelegate {
     
     let preferences: Preferences?
     let queue = DispatchQueue(label: "com.ceiba.MoviesMVVM", qos: .background, attributes: .concurrent)
@@ -20,10 +20,9 @@ public class Networking {
         self.preferences = try? PropertyListDecoder().decode(Preferences.self, from: xml!)
     }
     
-    public func fetchMovies(completion: @escaping([Movie])->Void){
+    func fetchMovies(completion: @escaping([Movie]?)->Void){
         
         let url = "\(preferences?.baseUrl ?? "")\(preferences?.discover ?? "")\(preferences?.apiKey ?? "")"
-        print(url)
         get(url: url) { response in
             if (response.error != nil){
                 return
