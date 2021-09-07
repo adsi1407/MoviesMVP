@@ -23,7 +23,7 @@ class MoviesPresenter{
     
     init(delegate: MoviesDelegate) {
         self.delegate = delegate
-        self.networkingDelegate = NetworkingMovies(networking: networking)
+        self.networkingDelegate = networking
     }
     
     public func fetchMovies(){

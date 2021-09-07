@@ -1,6 +1,6 @@
 import Alamofire
 
-class NetworkingMovies: NetworkingDelegate {
+class NetworkingProxy: NetworkingDelegate {
     private let networking: Networking
     
     init(networking: Networking) {

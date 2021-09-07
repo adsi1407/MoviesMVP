@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		476B597126E0582300263D3F /* NetworkingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B597026E0582300263D3F /* NetworkingDelegate.swift */; };
-		476B597326E0589900263D3F /* NetworkingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B597226E0589900263D3F /* NetworkingMovies.swift */; };
+		476B597326E0589900263D3F /* NetworkingProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B597226E0589900263D3F /* NetworkingProxy.swift */; };
 		CE6DDD592682078F00099CBE /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDD582682078F00099CBE /* DBController.swift */; };
 		CE6DDD5D2682084800099CBE /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDD5A2682084800099CBE /* MoviesView.swift */; };
 		CE6DDD5E2682084800099CBE /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6DDD5B2682084800099CBE /* MovieTableViewCell.swift */; };
@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		476B597026E0582300263D3F /* NetworkingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDelegate.swift; sourceTree = "<group>"; };
-		476B597226E0589900263D3F /* NetworkingMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMovies.swift; sourceTree = "<group>"; };
+		476B597226E0589900263D3F /* NetworkingProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProxy.swift; sourceTree = "<group>"; };
 		CE6DDD582682078F00099CBE /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		CE6DDD5A2682084800099CBE /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		CE6DDD5B2682084800099CBE /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 				476B597026E0582300263D3F /* NetworkingDelegate.swift */,
 				CEA8ED67267CCE1500274616 /* Networking.swift */,
 				CEA8ED68267CCE1500274616 /* Preferences.swift */,
-				476B597226E0589900263D3F /* NetworkingMovies.swift */,
+				476B597226E0589900263D3F /* NetworkingProxy.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -375,7 +375,7 @@
 				CE87360526838BE000300911 /* CartViewController.swift in Sources */,
 				CEA8ED66267CCE0900274616 /* Movie.swift in Sources */,
 				CE6DDD652682088800099CBE /* CartTableViewCellDelegate.swift in Sources */,
-				476B597326E0589900263D3F /* NetworkingMovies.swift in Sources */,
+				476B597326E0589900263D3F /* NetworkingProxy.swift in Sources */,
 				CE6DDD5E2682084800099CBE /* MovieTableViewCell.swift in Sources */,
 				CECB036B267CC457001A6750 /* SceneDelegate.swift in Sources */,
 				476B597126E0582300263D3F /* NetworkingDelegate.swift in Sources */,
